@@ -81,3 +81,10 @@ This file uses Flask's templating engine (Jinja) to display the dynamic results:
 The <form method="POST"> sends the student's question back to app.py.
 
 The {% if hint %} block only appears after the Python backend has processed the question and returned a result.
+
+
+# UI Interface example
+<img width="819" height="581" alt="image" src="https://github.com/user-attachments/assets/8c79fb5c-7cb5-4a33-9b0f-02cd9aaa57de" />
+
+
+
