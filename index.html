@@ -1,0 +1,37 @@
+[200~<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple AI Tutor for Year 5+</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f0f8ff; }
+        .container { max-width: 600px; margin: auto; background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.15); }
+        h1 { color: #4682b4; text-align: center; }
+        textarea { width: 98%; padding: 10px; margin-bottom: 15px; border: 1px solid #b0c4de; border-radius: 8px; resize: vertical; }
+        button { background-color: #4682b4; color: white; padding: 12px 20px; border: none; border-radius: 8px; cursor: pointer; width: 100%; font-size: 18px; }
+        button:hover { background-color: #3a6891; }
+        .hint-box { margin-top: 25px; padding: 20px; border-left: 6px solid #3cb371; background-color: #e6ffe8; border-radius: 8px; }
+        .hint-box h2 { margin-top: 0; color: #3cb371; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 Year 5+ Tutor Helper</h1>
+        <p>Ask a question (like "What is $14 \times 5 - 20$?") and the tutor will give you a gentle hint.</p>
+        
+        <form method="POST">
+            <label for="question">Your Question:</label>
+            <textarea id="question" name="question" rows="4" placeholder="Enter your math, science, or history question...">{{ question if question else '' }}</textarea>
+            <button type="submit">Get a Friendly Hint!</button>
+        </form>
+
+        {% if hint %}
+        <div class="hint-box">
+            <h2>📝 Tutor's Guidance</h2>
+            <p>{{ hint }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
